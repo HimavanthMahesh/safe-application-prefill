@@ -1,0 +1,13 @@
+{
+  "first_name": "Avery",
+  "last_name": "Candidate",
+  "full_name": "Avery Candidate",
+  "email": "avery.candidate@example.invalid",
+  "phone": "555-010-2040",
+  "linkedin": "https://www.linkedin.com/in/example-candidate",
+  "city": "Sample City",
+  "state": "California",
+  "postal_code": "90001",
+  "country": "United States",
+  "relocation": true
+}

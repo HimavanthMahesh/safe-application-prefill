@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Safe Application Prefill",
+  "version": "0.2.0",
+  "description": "Previews and fills approved non-sensitive fields on a small ATS allowlist. It cannot submit applications.",
+  "permissions": [
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://boards.greenhouse.io/*",
+    "https://job-boards.greenhouse.io/*",
+    "https://jobs.lever.co/*",
+    "https://jobs.ashbyhq.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Application Helper",
+    "default_popup": "popup.html"
+  }
+}

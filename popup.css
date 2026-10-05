@@ -1,0 +1,15 @@
+body {
+  width: 340px;
+  margin: 0;
+  background: #f7f8fb;
+  color: #18212f;
+  font: 14px/1.45 system-ui, sans-serif;
+}
+
+main { padding: 16px; }
+h1 { margin: 0 0 8px; font-size: 18px; }
+.notice { padding: 10px; border-left: 4px solid #bd7b00; background: #fff7df; }
+label { display: block; margin-top: 10px; font-weight: 600; }
+select, button { width: 100%; margin-top: 8px; padding: 9px; }
+button:disabled { opacity: .5; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; background: white; padding: 10px; border: 1px solid #d9dee8; }
