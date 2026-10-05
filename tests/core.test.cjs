@@ -28,6 +28,8 @@ assert.deepEqual(core.classifyElement(element({ label: "Race / ethnicity" })).re
 assert.deepEqual(core.classifyElement(element({ label: "I certify this is accurate" })).reason, "legal_attestation");
 assert.deepEqual(core.classifyElement(element({ label: "reCAPTCHA" })).reason, "captcha");
 assert.deepEqual(core.classifyElement(element({ label: "Will you now or in the future require visa sponsorship?" })).reason, "eligibility_requires_review");
+assert.deepEqual(core.classifyElement(element({ type: "radio", label: "LinkedIn" })).reason, "choice_requires_review");
+assert.equal(core.classifyElement(element({ label: "Legal First and Last Name" })).key, "full_name");
 
 const fields = [
   element({ name: "first_name", label: "First name" }),

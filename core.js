@@ -19,9 +19,9 @@
   const ELIGIBILITY_PATTERN = /\b(authori[sz]ed|legally eligible).*(work|employment)\b|\bwork authorization\b|\b(sponsor|sponsorship|visa)\b/i;
 
   const FIELD_RULES = [
+    ["full_name", /\bfull\s*name\b|\blegal\b.*\bname\b|^name$/i],
     ["first_name", /\b(first|given)\s*name\b/i],
     ["last_name", /\b(last|family|sur)\s*name\b/i],
-    ["full_name", /\b(full|legal)\s*name\b|^name$/i],
     ["email", /\be-?mail\b/i],
     ["phone", /\b(phone|mobile|telephone)\b/i],
     ["linkedin", /\blinkedin\b/i],
@@ -70,6 +70,7 @@
 
     if (!new Set(["input", "select", "textarea"]).has(tag)) return { status: "blocked", reason: "unsupported_control" };
     if (FORBIDDEN_TYPES.has(type)) return { status: "blocked", reason: "forbidden_control" };
+    if (type === "checkbox" || type === "radio") return { status: "review", reason: "choice_requires_review", descriptor: text };
     if (CAPTCHA_PATTERN.test(text)) return { status: "blocked", reason: "captcha" };
     if (SENSITIVE_PATTERN.test(text)) return { status: "blocked", reason: "protected_or_sensitive" };
     if (LEGAL_PATTERN.test(text)) return { status: "blocked", reason: "legal_attestation" };
