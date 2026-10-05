@@ -1,0 +1,20 @@
+{
+  "first_name": "Avery",
+  "last_name": "Candidate",
+  "full_name": "Avery Candidate",
+  "email": "avery.candidate@example.invalid",
+  "phone": "555-010-2040",
+  "linkedin": "https://www.linkedin.com/in/example-candidate",
+  "github": "https://github.com/example-candidate",
+  "street_address": "123 Example Street",
+  "city": "Sample City",
+  "state": "California",
+  "postal_code": "90001",
+  "country": "United States",
+  "relocation": "Yes",
+  "current_company": "Example Company",
+  "current_title": "Engineering Intern",
+  "school": "Example University",
+  "degree": "Master of Engineering",
+  "field_of_study": "Electrical and Computer Engineering"
+}

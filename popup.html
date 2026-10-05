@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Application Helper</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <h1>Safe Application Prefill</h1>
+      <p class="notice">Pilot mode. Resume upload, sensitive answers, attestations, and final submission are disabled.</p>
+      <label for="profile">Profile</label>
+      <select id="profile">
+        <option value="synthetic">Synthetic test profile</option>
+        <option value="local">Local candidate profile</option>
+      </select>
+      <button id="preview" type="button">Preview safe fields</button>
+      <button id="fill" type="button" disabled>Fill previewed fields</button>
+      <pre id="result" aria-live="polite">Open an allowed Greenhouse, Lever, or Ashby application.</pre>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
