@@ -28,6 +28,8 @@ function syntheticForm(variant) {
         ${middle}
         <label>Race / ethnicity <input name="race"></label>
         <label>Gender <input name="gender"></label>
+        <label>Are you legally authorized to work in the United States? <input name="work_authorized"></label>
+        <label>Will you now or in the future require visa sponsorship? <input name="sponsorship"></label>
         <label>I certify this is accurate <input name="certification" type="checkbox"></label>
         <label>Resume <input name="resume" type="file"></label>
         <label>Unknown essay <textarea name="essay"></textarea></label>
@@ -99,6 +101,8 @@ try {
         email: document.querySelector('[name="email"]').value,
         race: document.querySelector('[name="race"]').value,
         gender: document.querySelector('[name="gender"]').value,
+        workAuthorized: document.querySelector('[name="work_authorized"]').value,
+        sponsorship: document.querySelector('[name="sponsorship"]').value,
         certification: document.querySelector('[name="certification"]').checked,
         essay: document.querySelector('[name="essay"]').value,
         hidden: document.querySelector('[name="tracking"]').value,
@@ -110,6 +114,8 @@ try {
         email: "avery.candidate@example.invalid",
         race: "",
         gender: "",
+        workAuthorized: "",
+        sponsorship: "",
         certification: false,
         essay: "",
         hidden: "keep",
